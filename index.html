@@ -1,0 +1,2364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marlowe Emrys | Digital Solutions for Business Growth</title>
+    <meta name="description" content="Marlowe Emrys delivers digital solutions for startups and enterprises, combining strategy, design, and technology across brand identity, custom platforms, and private label support.">
+    <meta name="keywords" content="Marlowe Emrys, digital solutions, identity design strategy, custom-built platforms, business growth strategy, private label solutions, web innovation, custom web apps, startups, enterprises, businesses worldwide, web3-friendly payments, product roadmap">
+    <link rel="canonical" href="https://marloweemrys.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Marlowe Emrys | Digital Solutions for Business Growth">
+    <meta property="og:description" content="Marlowe Emrys delivers digital solutions for startups and enterprises, combining strategy, design, and technology across brand identity, custom platforms, and private label support.">
+    <meta property="og:url" content="https://marloweemrys.com/">
+    <meta property="og:image" content="https://marloweemrys.com/img/marloweemrys.png">
+    <meta property="og:image:alt" content="Marlowe Emrys digital solutions emblem representing strategy, design, and growth for businesses of all sizes">
+    <meta property="og:site_name" content="Marlowe Emrys">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marlowe Emrys | Digital Solutions for Business Growth">
+    <meta name="twitter:description" content="Digital solutions blending strategy and design for brand identity, custom platforms, private label support.">
+    <meta name="twitter:image" content="https://marloweemrys.com/img/marloweemrys.png">
+    <meta name="twitter:image:alt" content="Marlowe Emrys digital solutions emblem representing strategy, design, and growth for businesses of all sizes">
+    <meta name="twitter:url" content="https://marloweemrys.com/">
+
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+
+    <style>
+        :root {
+            font-family: "SF Pro Display", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            color-scheme: light;
+            --bg-gradient-top: #f7f4ee;
+            --bg-gradient-bottom: #ebe5dc;
+            --frame-bg: #ffffff;
+            --frame-border: #e0d7ca;
+            --frame-outline: rgba(201, 138, 79, 0.24);
+            --text-primary: #1f2430;
+            --text-secondary: #5b5f68;
+            --accent: #c98a4f;
+            --accent-soft: rgba(201, 138, 79, 0.16);
+            --shadow-soft: 0 26px 60px rgba(48, 41, 33, 0.12);
+            --window-border: #e8ded2;
+            --window-bg: #ffffff;
+            --cta-secondary: #f4efe9;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: radial-gradient(circle at 14% 10%, rgba(201, 138, 79, 0.12) 0, transparent 55%),
+                        radial-gradient(circle at 86% 12%, rgba(255, 210, 160, 0.15) 0, transparent 60%),
+                        linear-gradient(var(--bg-gradient-top), var(--bg-gradient-bottom));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(16px, 4vw, 40px);
+            color: var(--text-primary);
+        }
+
+        .desktop-frame {
+            width: min(1100px, 100%);
+            min-height: min(720px, calc(100vh - clamp(32px, 6vw, 72px)));
+            background: var(--frame-bg);
+            border-radius: 32px;
+            border: 1px solid var(--frame-border);
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .desktop-frame::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            border: 1px solid var(--frame-outline);
+            pointer-events: none;
+        }
+
+        .menu-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 28px;
+            border-bottom: 1px solid rgba(201, 138, 79, 0.18);
+            backdrop-filter: blur(12px);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(246, 240, 232, 0.88));
+            position: sticky;
+            top: 0;
+            z-index: 5;
+        }
+
+        .menu-left,
+        .menu-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .menu-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            font-size: 15px;
+            color: var(--text-primary);
+        }
+
+        .menu-logo-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 6px;
+            object-fit: cover;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.42);
+        }
+
+        .menu-link {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
+
+        .menu-link:hover {
+            color: var(--accent);
+        }
+
+        .menu-right .menu-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--text-primary);
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .menu-right .menu-status::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.6);
+        }
+
+        .menu-right .status-online::before {
+            background: #40ba84;
+            box-shadow: 0 0 0 1px rgba(64, 186, 132, 0.35);
+        }
+
+        .menu-right .status-energy {
+            gap: 10px;
+        }
+
+        .menu-right .status-energy::before {
+            width: 28px;
+            height: 6px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #ffb96d 0%, #ff4f6a 100%);
+            box-shadow: inset 0 0 0 1px rgba(255, 79, 106, 0.28);
+        }
+
+        .menu-right .status-energy .status-value {
+            font-variant-numeric: tabular-nums;
+            color: #ff4f6a;
+        }
+
+        .menu-right .status-vision::before {
+            background: linear-gradient(135deg, #ffb96d, #ff4f6a);
+        }
+
+        .desktop-content {
+            padding: clamp(32px, 6vw, 64px);
+            display: grid;
+            gap: clamp(28px, 5vw, 52px);
+        }
+
+        .hero {
+            text-align: center;
+            display: grid;
+            gap: 24px;
+            justify-items: center;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: clamp(30px, 6vw, 46px);
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-title {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(10px, 2vw, 16px) clamp(22px, 4vw, 38px);
+            border-radius: clamp(22px, 5vw, 40px);
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.42);
+            box-shadow: inset 0 0 0 1px rgba(201, 138, 79, 0.16), 0 18px 48px rgba(31, 36, 48, 0.16);
+            overflow: hidden;
+            z-index: 0;
+            isolation: isolate;
+        }
+
+        .hero-title::before {
+            content: "";
+            position: absolute;
+            inset: -45%;
+            background: conic-gradient(from 140deg at 50% 50%, rgba(201, 138, 79, 0.45), rgba(240, 224, 206, 0.5), rgba(134, 123, 109, 0.4), rgba(201, 138, 79, 0.45));
+            filter: blur(46px);
+            opacity: 0.42;
+            animation: heroTitleAurora 28s linear infinite;
+        }
+
+        .hero-title::after {
+            content: "";
+            position: absolute;
+            inset: -60%;
+            background: radial-gradient(circle at 22% 28%, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0) 42%),
+                        radial-gradient(circle at 78% 72%, rgba(210, 182, 144, 0.5) 0, rgba(210, 182, 144, 0) 48%),
+                        radial-gradient(circle at 32% 80%, rgba(170, 157, 140, 0.4) 0, rgba(170, 157, 140, 0) 50%);
+            filter: blur(32px);
+            opacity: 0.32;
+            animation: heroTitleDrift 20s ease-in-out infinite alternate;
+        }
+
+        .hero-title__text {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            color: var(--text-primary);
+            text-shadow: 0 12px 32px rgba(31, 36, 48, 0.28);
+            transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        @supports (-webkit-background-clip: text) or (background-clip: text) {
+            .hero-title__text {
+                background: linear-gradient(120deg, #1f2430 0%, #4a515f 52%, #c98a4f 100%);
+                background-size: 200% 200%;
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+                animation: heroTitleSpectrum 16s ease-in-out infinite;
+            }
+
+            .hero-title__text::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.6) 45%, transparent 100%);
+                mix-blend-mode: screen;
+                opacity: 0;
+                transform: translateX(-120%);
+                animation: heroTitleSheen 14s ease-in-out infinite;
+            }
+        }
+
+        .hero-title__text::after {
+            pointer-events: none;
+        }
+
+        .hero-title::before,
+        .hero-title::after,
+        .hero-title__text::after {
+            will-change: transform, opacity;
+        }
+
+        .hero-title:hover .hero-title__text {
+            transform: translate3d(0, -3px, 0) scale(1.005);
+        }
+
+        @keyframes heroTitleSpectrum {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes heroTitleSheen {
+            0%, 12% {
+                opacity: 0;
+                transform: translateX(-120%);
+            }
+            24% {
+                opacity: 0.35;
+            }
+            36% {
+                opacity: 0;
+                transform: translateX(120%);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(120%);
+            }
+        }
+
+        @keyframes heroTitleAurora {
+            0% {
+                transform: rotate(0deg) scale(1.03);
+            }
+            100% {
+                transform: rotate(360deg) scale(1.03);
+            }
+        }
+
+        @keyframes heroTitleDrift {
+            0% {
+                transform: translate3d(-4%, -3%, 0) scale(1.01);
+                opacity: 0.28;
+            }
+            50% {
+                transform: translate3d(3%, 4%, 0) scale(1.05);
+                opacity: 0.45;
+            }
+            100% {
+                transform: translate3d(-2%, 2%, 0) scale(1.02);
+                opacity: 0.32;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-title,
+            .hero-title::before,
+            .hero-title::after,
+            .hero-title__text,
+            .hero-title__text::after {
+                animation: none !important;
+                transition-duration: 0.01s !important;
+            }
+        }
+
+        .hero-logo {
+            width: clamp(260px, 60%, 420px);
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-lede {
+            margin: 0;
+            max-width: 620px;
+            font-size: clamp(17px, 2.1vw, 20px);
+            line-height: 1.65;
+            color: var(--text-secondary);
+        }
+
+        .hero-summary {
+            margin: 16px auto 24px;
+            max-width: 640px;
+            font-size: clamp(16px, 1.9vw, 18px);
+            line-height: 1.65;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        .hero-summary a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .hero-summary a:hover,
+        .hero-summary a:focus {
+            text-decoration: underline;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .hero-badge {
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: 1px solid rgba(201, 138, 79, 0.28);
+            background: rgba(201, 138, 79, 0.12);
+            color: var(--accent);
+            font-size: 13px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .button {
+            padding: 14px 28px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .button:focus-visible {
+            outline: 3px solid rgba(255, 79, 106, 0.32);
+            outline-offset: 3px;
+        }
+
+        .button-primary {
+            background: linear-gradient(135deg, #ffb96d, #ff4f6a);
+            color: #1f2430;
+            box-shadow: 0 14px 30px rgba(255, 79, 106, 0.28);
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px rgba(255, 79, 106, 0.38);
+        }
+
+        .button-secondary {
+            background: var(--cta-secondary);
+            color: var(--text-primary);
+            box-shadow: inset 0 0 0 1px rgba(201, 138, 79, 0.2);
+        }
+
+        .button-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: inset 0 0 0 1px rgba(201, 138, 79, 0.32);
+        }
+
+        .window {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(246, 240, 232, 0.92));
+            border-radius: 24px;
+            border: 1px solid var(--window-border);
+            padding: clamp(24px, 4vw, 32px);
+            box-shadow: 0 20px 50px rgba(63, 56, 48, 0.16);
+        }
+
+        .punchline {
+            margin: 0;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(240px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        @media (max-width: 720px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .service-card {
+            padding: 22px;
+            border-radius: 20px;
+            border: 1px solid rgba(201, 138, 79, 0.18);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(246, 242, 236, 0.92));
+            display: grid;
+            gap: 14px;
+            text-align: left;
+        }
+
+        .service-desc {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .service-card h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .service-card ul {
+            margin: 0;
+            padding-left: 18px;
+            display: grid;
+            gap: 6px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .service-card ul.keyword-tags {
+            margin: 8px 0 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword-tag {
+            padding: 6px 10px;
+            border-radius: 10px;
+            background: rgba(201, 138, 79, 0.14);
+            color: var(--accent);
+            font-size: 12px;
+        }
+
+        .roadmap-keywords {
+            margin-bottom: 20px;
+        }
+
+        .roadmap-spotlight {
+            margin: 0 0 28px;
+            width: 100%;
+            max-width: none;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            align-items: stretch;
+        }
+
+        .roadmap-spotlight .roadmap-card {
+            height: 100%;
+        }
+
+        .roadmap-card--glass {
+            position: relative;
+            display: grid;
+            gap: clamp(12px, 2.6vw, 16px);
+            justify-items: center;
+            align-items: start;
+            background:
+                radial-gradient(140% 120% at 12% -12%, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0) 58%),
+                radial-gradient(120% 130% at 92% 118%, rgba(176, 202, 234, 0.32) 0%, rgba(176, 202, 234, 0) 70%),
+                linear-gradient(188deg, rgba(248, 251, 255, 0.9) 0%, rgba(214, 227, 248, 0.6) 52%, rgba(200, 217, 239, 0.55) 100%);
+            padding: clamp(18px, 4vw, 32px);
+            border-radius: 20px;
+            border: 1px solid rgba(114, 154, 208, 0.42);
+            box-shadow:
+                0 30px 60px rgba(26, 53, 92, 0.18),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6),
+                inset 0 0 0 1.2px rgba(91, 135, 194, 0.18);
+            color: #132543;
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+        }
+
+        .roadmap-card--glass .promo-logo-name,
+        .roadmap-card--glass .promo-button {
+            width: auto;
+            margin: 0;
+        }
+
+        @media (max-width: 420px) {
+            .roadmap-card--glass {
+                padding: 22px;
+            }
+        }
+
+        .roadmap-card--glass::before {
+            content: "";
+            position: absolute;
+            inset: -18% -28% 42% 6%;
+            background: linear-gradient(128deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.18) 45%, rgba(255, 255, 255, 0) 78%);
+            opacity: 0.85;
+            pointer-events: none;
+            mix-blend-mode: screen;
+        }
+
+        .roadmap-card--glass::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            box-shadow:
+                inset 0 0 0 1.4px rgba(255, 255, 255, 0.35),
+                0 0 0 1.2px rgba(104, 147, 204, 0.22);
+            pointer-events: none;
+            mix-blend-mode: screen;
+        }
+
+        .roadmap-card--glass > * {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        .promo-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.65);
+            border: 1px solid rgba(36, 67, 112, 0.24);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #21406a;
+        }
+
+        .promo-title {
+            margin: 0;
+            font-size: clamp(24px, 3.8vw, 34px);
+            line-height: 1.16;
+            color: #132543;
+        }
+
+        .promo-sub {
+            margin: 0;
+            color: #38506f;
+            font-size: 15px;
+            line-height: 1.6;
+            max-width: 540px;
+        }
+
+        .promo-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .promo-logo-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: linear-gradient(140deg, #5c6f8a, #3f526d);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22), 0 12px 22px rgba(31, 51, 81, 0.32);
+            gap: 5px;
+        }
+
+        .promo-logo-icon span {
+            display: block;
+            width: 4px;
+            height: 16px;
+            border-radius: 6px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(138, 160, 190, 0.35));
+        }
+
+        .promo-logo-icon span:nth-child(2) { opacity: 0.8; }
+        .promo-logo-icon span:nth-child(3) { opacity: 0.7; }
+        .promo-logo-icon span:nth-child(4) { opacity: 0.6; }
+        .promo-logo-icon span:nth-child(5) { opacity: 0.5; }
+
+        .roadmap-card--glass .card-logo-slot {
+            background: rgba(47, 79, 124, 0.16);
+            border: 1px solid rgba(47, 79, 124, 0.28);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(10px);
+        }
+
+        .promo-logo-name {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.68);
+            border: 1px solid rgba(55, 89, 136, 0.26);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            color: #1d3556;
+        }
+
+        .roadmap-card--glass .promo-logo-name {
+            letter-spacing: 0.28em;
+            background: rgba(255, 255, 255, 0.74);
+            border: 1px solid rgba(55, 89, 136, 0.28);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+        }
+
+        .glass-description-heading {
+            display: none;
+        }
+
+        .promo-footer {
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+            margin-top: clamp(6px, 1.4vw, 12px);
+        }
+
+        .roadmap-card--glass .promo-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .roadmap-card--glass .card-domain {
+            background: rgba(67, 143, 220, 0.18);
+            color: #1d3556;
+            box-shadow: inset 0 0 0 1px rgba(67, 164, 255, 0.24);
+        }
+
+        .roadmap-card--glass .card-domain:hover,
+        .roadmap-card--glass .card-domain:focus {
+            background: linear-gradient(135deg, #1f6bf0, #43a4ff);
+            color: #f0f6ff;
+        }
+
+        .glass-milestones {
+            margin-top: 10px;
+        }
+
+        .promo-launch {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 18px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(47, 79, 124, 0.22);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #264a7c;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+        }
+
+        .status-launch {
+            background: rgba(30, 102, 216, 0.18);
+            color: #1f6bf0;
+            box-shadow: inset 0 0 0 1px rgba(67, 164, 255, 0.24);
+        }
+
+        .promo-launch .panes {
+            display: inline-flex;
+            gap: 4px;
+        }
+
+        .promo-launch .panes span {
+            display: block;
+            width: 5px;
+            height: 12px;
+            border-radius: 3px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(176, 197, 222, 0.35));
+            opacity: 0.9;
+        }
+
+        .promo-launch-label .panes {
+            display: inline-flex;
+            gap: 4px;
+        }
+
+        .promo-launch-label .panes span {
+            display: block;
+            width: 5px;
+            height: 12px;
+            border-radius: 3px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(176, 197, 222, 0.35));
+            opacity: 0.9;
+        }
+
+        .promo-launch .panes span:nth-child(2),
+        .promo-launch-label .panes span:nth-child(2) { opacity: 0.75; }
+
+        .promo-launch .panes span:nth-child(3),
+        .promo-launch-label .panes span:nth-child(3) { opacity: 0.6; }
+
+        .promo-launch .panes span:nth-child(4),
+        .promo-launch-label .panes span:nth-child(4) { opacity: 0.48; }
+
+        .promo-launch .panes span:nth-child(5),
+        .promo-launch-label .panes span:nth-child(5) { opacity: 0.38; }
+
+        .promo-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #1f6bf0, #43a4ff);
+            color: #f0f6ff;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 13.5px;
+            box-shadow: 0 16px 30px rgba(28, 102, 220, 0.24);
+        }
+
+        .roadmap-card--glass .promo-button {
+            margin: 0;
+        }
+
+        .promo-chip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 5px 16px;
+            border-radius: 999px;
+            background: rgba(52, 110, 187, 0.12);
+            border: 1px solid rgba(52, 110, 187, 0.28);
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #214a83;
+            white-space: nowrap;
+        }
+
+        .promo-chip::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #43a4ff, #1f6bf0);
+            box-shadow:
+                0 0 0 3px rgba(67, 164, 255, 0.26),
+                0 0 14px rgba(67, 164, 255, 0.45);
+        }
+
+        .promo-button svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .promo-button:focus-visible {
+            outline: 2px solid rgba(28, 102, 220, 0.5);
+            outline-offset: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .promo-panel {
+                padding: 18px;
+                text-align: center;
+                justify-items: center;
+            }
+
+            .promo-title,
+            .promo-sub {
+                text-align: center;
+            }
+
+            .promo-sub {
+                max-width: 100%;
+            }
+
+            .promo-button,
+            .promo-chip {
+                justify-self: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .promo-logo-name {
+                white-space: nowrap;
+                letter-spacing: 0.24em;
+                padding: 6px 14px;
+                font-size: 11px;
+            }
+
+            .promo-chip {
+                white-space: nowrap;
+                letter-spacing: 0.12em;
+                padding: 6px 12px;
+                font-size: 10px;
+            }
+        }
+
+        .window h2 {
+            margin: 0 0 12px;
+            font-size: clamp(22px, 3vw, 28px);
+        }
+
+        .window p {
+            margin: 0 0 24px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .roadmap-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        .roadmap-card {
+            padding: 22px;
+            border-radius: 20px;
+            border: 1px solid rgba(201, 138, 79, 0.16);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(246, 240, 234, 0.9));
+            display: grid;
+            gap: 16px;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .faq-wrapper {
+            margin: 0 auto;
+            max-width: 768px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        @media (min-width: 1024px) {
+            .faq-wrapper {
+                max-width: 1024px;
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+        }
+
+        .faq-grid {
+            display: block;
+        }
+
+        .faq-column {
+            display: grid;
+            gap: 0;
+            border-top: 1px solid rgba(201, 138, 79, 0.18);
+            border-bottom: 1px solid rgba(201, 138, 79, 0.18);
+        }
+
+        .faq-item {
+            padding: 12px 0;
+            scroll-margin-top: 96px;
+        }
+
+        .faq-item + .faq-item {
+            border-top: 1px solid rgba(201, 138, 79, 0.18);
+        }
+
+        .faq-trigger {
+            background: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            width: 100%;
+            text-align: left;
+            color: var(--text-primary);
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.4;
+            padding: 12px 4px;
+            min-height: 44px;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        @media (min-width: 1024px) {
+            .faq-trigger {
+                font-size: 17px;
+                padding: 16px 4px;
+            }
+        }
+
+        .faq-trigger:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+        .faq-trigger:hover,
+        .faq-trigger:focus-visible {
+            color: var(--accent);
+        }
+
+        .faq-question {
+            font-weight: 500;
+            flex: 1 1 auto;
+        }
+
+        .faq-icon {
+            flex: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+        }
+
+        .chev {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.2s ease-out;
+        }
+
+        .faq-trigger[aria-expanded="true"] .chev {
+            transform: rotate(180deg);
+        }
+
+        .faq-panel {
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.2s ease-out, opacity 0.2s ease-out;
+        }
+
+        .faq-panel[data-state="open"] {
+            opacity: 1;
+        }
+
+        .faq-panel-content {
+            padding: 4px 4px 16px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        @media (min-width: 1024px) {
+            .faq-panel-content {
+                font-size: 16px;
+                line-height: 1.7;
+                padding-bottom: 20px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .faq-trigger,
+            .faq-icon,
+            .chev,
+            .faq-panel {
+                transition: none;
+            }
+        }
+
+        .card-logo-slot {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: rgba(201, 138, 79, 0.12);
+            display: grid;
+            place-items: center;
+            color: var(--accent);
+            font-weight: 600;
+            box-shadow: inset 0 0 0 1px rgba(201, 138, 79, 0.28);
+            overflow: hidden;
+        }
+
+        .card-logo-slot span {
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .card-logo-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .card-project {
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            color: var(--text-primary);
+        }
+
+        .card-domain {
+            align-self: flex-start;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(201, 138, 79, 0.14);
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .card-domain:visited {
+            color: var(--accent);
+        }
+
+        .card-domain:hover,
+        .card-domain:focus {
+            background: var(--accent);
+            color: #ffffff;
+        }
+
+        .roadmap-card header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .status {
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent);
+        }
+
+        .status.active {
+            background: rgba(64, 186, 132, 0.16);
+            color: #1f8557;
+        }
+
+        .roadmap-card .status-vision {
+            background: linear-gradient(135deg, #ffb96d, #ff4f6a);
+            color: #ffffff;
+            box-shadow: 0 10px 22px rgba(255, 79, 106, 0.24);
+        }
+
+        .milestones {
+            margin: 0;
+            padding-left: 18px;
+            display: grid;
+            gap: 8px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .timeline-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: rgba(90, 96, 105, 0.72);
+        }
+
+        .roadmap-card--glass .timeline-meta {
+            justify-self: start;
+        }
+
+        .roadmap-footer {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .roadmap-period {
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(63, 110, 170, 0.12);
+            border: 1px solid rgba(63, 110, 170, 0.24);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #27416a;
+        }
+
+        .roadmap-pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .roadmap-pill--explore {
+            background: linear-gradient(135deg, #1f6bf0, #43a4ff);
+            color: #f0f6ff;
+            box-shadow: 0 14px 26px rgba(28, 102, 220, 0.24);
+        }
+
+        .roadmap-pill--explore:visited {
+            color: #f0f6ff;
+        }
+
+        .roadmap-card--glass .timeline-meta {
+            color: rgba(38, 74, 124, 0.72);
+        }
+
+
+        .calendar-window iframe {
+            width: 100%;
+            height: clamp(360px, 40vw, 520px);
+            border: 1px solid rgba(201, 138, 79, 0.18);
+            border-radius: 16px;
+            background-color: transparent;
+        }
+
+        .calendar-window {
+            overflow: visible;
+        }
+
+        #my-cal-inline-15min {
+            background: transparent !important;
+            width: 100%;
+            max-width: 100%;
+            border-radius: 16px;
+            overflow: visible;
+        }
+
+        #my-cal-inline-15min > * {
+            max-width: 100% !important;
+            height: auto !important;
+        }
+
+
+        .dock {
+            position: sticky;
+            bottom: 0;
+            margin-top: auto;
+            padding: 32px clamp(32px, 6vw, 48px);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 238, 229, 0.88));
+            border-top: 1px solid rgba(201, 138, 79, 0.18);
+            backdrop-filter: blur(14px);
+        }
+
+        .dock-text {
+            margin: 0;
+            text-align: center;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+
+        .floating-status {
+            position: absolute;
+            top: 18px;
+            left: 28px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.78);
+            border-radius: 999px;
+            border: 1px solid rgba(201, 138, 79, 0.28);
+            font-size: 12px;
+            color: var(--text-secondary);
+            backdrop-filter: blur(8px);
+        }
+
+        .floating-status::before {
+            content: "•";
+            font-size: 16px;
+            color: var(--accent);
+        }
+
+        @media (max-width: 860px) {
+            .menu-bar {
+                flex-direction: column;
+                gap: 6px;
+                padding: 12px 20px;
+            }
+
+            .menu-left,
+            .menu-right {
+                gap: 14px;
+            }
+
+            .hero-logo {
+                width: min(380px, 100%);
+            }
+
+            .desktop-content {
+                padding: 28px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 12px;
+            }
+
+            .desktop-frame {
+                border-radius: 22px;
+            }
+
+            .desktop-content {
+                padding: 24px;
+            }
+
+            .hero-actions {
+                display: grid;
+            }
+
+            .dock {
+                padding: 16px 24px 26px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-left,
+            .menu-right {
+                font-size: 13px;
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .floating-status {
+                left: 16px;
+                right: 16px;
+                justify-content: center;
+            }
+
+            .menu-logo {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .menu-left {
+                justify-content: center;
+                gap: 12px;
+                padding-bottom: 6px;
+            }
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3B6S9ZKXZL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3B6S9ZKXZL');
+    </script>
+</head>
+<body>
+    <div class="desktop-frame">
+        <div class="menu-bar" role="navigation">
+            <div class="menu-left">
+                <div class="menu-logo"><img class="menu-logo-icon" src="img/favicon.png" alt="Marlowe Emrys emblem representing crafted digital solutions across strategy, design, and growth support">Marlowe Emrys</div>
+                <a class="menu-link" href="#services">Services</a>
+                <a class="menu-link" href="#products">Products</a>
+                <a class="menu-link" href="#faq">FAQ</a>
+                <a class="menu-link" href="#schedule">Schedule</a>
+            </div>
+            <div class="menu-right">
+                <span class="menu-link menu-status status-online">Online</span>
+                <span class="menu-link menu-status status-energy">Energy <span class="status-value">100%</span></span>
+                <span class="menu-link menu-status status-vision">Vision</span>
+                <span id="menu-clock">--:--</span>
+            </div>
+        </div>
+
+        <main class="desktop-content">
+            <section class="hero" id="about">
+                <img class="hero-logo" src="img/marloweemrys.png" alt="Marlowe Emrys digital solutions mark representing expertly crafted strategy and design for businesses of all sizes worldwide">
+                <h1 class="hero-title">
+                    <span class="hero-title__text">Marlowe Emrys Digital Solutions for Business Growth</span>
+                </h1>
+                <h2 class="hero-lede">Partnering with startups, growing businesses, and enterprises worldwide, we provide crafted digital solutions backed by strategy and strong project support.</h2>
+                <p class="hero-summary">Marlowe Emrys digital solutions help organizations—from emerging startups to established enterprises—navigate growth with crafted support grounded in strategy, design, and technology across identity design &amp; strategy, custom-built platforms, business growth strategy, and private label solutions. Explore our <a href="#services">services</a>, review the <a href="#products">product roadmap</a>, see the <a href="#faq">Frequently Asked Questions</a>, and <a href="#schedule">schedule</a> a 15-minute video call.</p>
+                <div class="hero-badges" role="list">
+                    <div class="hero-badge" role="listitem">Web3-Friendly Payments</div>
+                    <div class="hero-badge" role="listitem">Custom-Built Platforms</div>
+                    <div class="hero-badge" role="listitem">Denver HQ · Global Reach</div>
+                </div>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#products">Product Roadmap</a>
+                    <a class="button button-secondary" href="#schedule">Let's Connect</a>
+                </div>
+            </section>
+
+            <section class="window" id="services" aria-labelledby="services-title">
+                <h2 id="services-title">Services from Marlowe Emrys Digital Solutions</h2>
+                <p class="punchline">From early-stage teams to established enterprises, we deliver identity design, custom-built platforms, business growth strategy, and private label solutions that drive measurable success. Review the <a href="#products">product roadmap</a> for collaboration opportunities or <a href="#schedule">schedule</a> a 15-minute video call.</p>
+                <div class="service-grid">
+                    <article class="service-card" id="identity-design-strategy">
+                        <h3>Identity Design & Strategy</h3>
+                        <p class="service-desc">Build a brand identity that inspires, connects, and endures. We align creative direction with business goals to define and elevate your presence in the market.</p>
+                        <ul>
+                            <li>Strategic branding that inspires and connects</li>
+                            <li>Creative direction aligned with your business vision</li>
+                            <li>Identity systems that define and elevate brands</li>
+                        </ul>
+                        <ul class="keyword-tags" aria-label="keyword tags">
+                            <li class="keyword-tag">identity design strategy</li>
+                            <li class="keyword-tag">strategic brand systems</li>
+                        </ul>
+                    </article>
+                    <article class="service-card" id="custom-built-platforms">
+                        <h3>Custom-Built Platforms</h3>
+                        <p class="service-desc">Transform ideas into scalable digital products. From design-to-code delivery to integrated analytics, we build platforms tailored to your business goals.</p>
+                        <ul>
+                            <li>Design-to-code delivery for web apps, portals, and APIs</li>
+                            <li>Web platforms customized to business needs and goals</li>
+                            <li>Secure, scalable infrastructure to support growth</li>
+                        </ul>
+                        <ul class="keyword-tags" aria-label="keyword tags">
+                            <li class="keyword-tag">custom digital solutions</li>
+                            <li class="keyword-tag">design-to-code development</li>
+                        </ul>
+                    </article>
+                    <article class="service-card" id="business-growth-strategy">
+                        <h3>Business Growth Strategy</h3>
+                        <p class="service-desc">Navigate growth with strategic roadmapping and hands-on project support. We help align your goals with clear execution plans for measurable results.</p>
+                        <ul>
+                            <li>Strategic roadmapping to align vision and execution</li>
+                            <li>Advisory support for scalable business growth</li>
+                            <li>Project management that ensures smooth delivery</li>
+                        </ul>
+                        <ul class="keyword-tags" aria-label="keyword tags">
+                            <li class="keyword-tag">strategic roadmapping</li>
+                            <li class="keyword-tag">project management support</li>
+                        </ul>
+                    </article>
+                    <article class="service-card" id="private-label-solutions">
+                        <h3>Private Label Solutions</h3>
+                        <p class="service-desc">Expand your offerings with rebrandable digital products and services. We provide scalable solutions that agencies and partners can brand as their own.</p>
+                        <ul>
+                            <li>Customizable platforms designed for seamless rebranding</li>
+                            <li>Scalable solutions for agencies and resellers</li>
+                            <li>Ongoing support to ensure client success under your brand</li>
+                        </ul>
+                        <ul class="keyword-tags" aria-label="keyword tags">
+                            <li class="keyword-tag">rebrandable digital platforms</li>
+                            <li class="keyword-tag">scalable white label services</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="window" id="products" aria-labelledby="products-title">
+                <h2 id="products-title">Product Roadmap for Business Growth</h2>
+                <p>Our flagship products and ideas shape the future of our ecosystem. Each is designed with growth in mind and open to partnership or sponsorship opportunities for businesses seeking meaningful investment and collaboration. Explore our <a href="#services">services</a> for tailored support, review the <a href="#faq">Frequently Asked Questions</a>, or <a href="#schedule">schedule</a> a 15-minute video call.</p>
+                <div class="keyword-tags roadmap-keywords" aria-label="Roadmap keyword themes">
+                    <span class="keyword-tag">scalable product innovation</span>
+                    <span class="keyword-tag">strategic collaboration opportunities</span>
+                    <span class="keyword-tag">business growth partnerships</span>
+                </div>
+                <div class="roadmap-grid">
+                    <article class="roadmap-card roadmap-card--glass" aria-labelledby="roadmap-spotlight-title">
+                        <div class="card-logo-slot">
+                            <img src="img/glass-crm.png" alt="Glass CRM logo representing adaptable workspaces and encrypted collaboration">
+                        </div>
+                        <span class="promo-logo-name">Glass CRM</span>
+                        <a class="promo-button" href="https://glasscrm.app" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l-.707.707 5.146 5.146H1v1h11.439l-5.146 5.146L8 15l7-7z"/></svg>
+                            Explore Glass CRM
+                        </a>
+                        <ul class="milestones glass-milestones">
+                            <li>First open-source release by Marlowe Emrys.</li>
+                            <li>Build a workspace that mirrors your business.</li>
+                            <li>Collaborate securely with encrypted Urgent Chat + RBAC.</li>
+                        </ul>
+                        <div class="timeline-meta">
+                            <span>Owner: Marlowe Emrys</span>
+                        </div>
+
+                        <div class="roadmap-footer">
+                            <span class="roadmap-period">Q4 2025</span>
+                            <a class="roadmap-pill roadmap-pill--explore" href="https://glasscrm.app" target="_blank" rel="noopener noreferrer">Explore</a>
+                        </div>
+                    </article>
+                    <article class="roadmap-card">
+                        <div class="card-logo-slot">
+                            <img src="img/276-agency.png" alt="276.agency logo representing tailored websites, branding, digital experiences, custom apps, SaaS solutions, and integrations">
+                        </div>
+                        <div class="card-project">276.agency</div>
+                        <a class="card-domain" href="https://276.agency" target="_blank" rel="noopener noreferrer">276.agency</a>
+                        <header>
+                            <span>Q4 2025</span>
+                            <span class="status active">In Progress</span>
+                        </header>
+                        <ul class="milestones">
+                            <li>Reimagine your presence with tailored websites, branding, and digital experiences.</li>
+                            <li>Custom apps, SaaS solutions, and seamless integrations.</li>
+                            <li>SEO, CRO, and content marketing strategies that tell your story.</li>
+                        </ul>
+                        <div class="timeline-meta">
+                            <span>Owner: Marlowe Emrys</span>
+                        </div>
+                    </article>
+
+                    <article class="roadmap-card">
+                        <div class="card-logo-slot">
+                            <img src="img/coder-next-door.png" alt="Coder Next Door logo symbolizing websites, apps, and tech help with local support and neighborhood-style service">
+                        </div>
+                        <div class="card-project">Coder Next Door</div>
+                        <a class="card-domain" href="https://codernextdoor.com" target="_blank" rel="noopener noreferrer">codernextdoor.com</a>
+                        <header>
+                            <span>Q1 2026</span>
+                            <span class="status active">Discovery</span>
+                        </header>
+                        <ul class="milestones">
+                            <li>Websites, apps, and tech help with fast, reliable local support.</li>
+                            <li>Reliable support from local developers or access providers worldwide that still feel like home.</li>
+                            <li>Local expertise for projects big and small, with neighborhood-style service and global reach.</li>
+                        </ul>
+                        <div class="timeline-meta">
+                            <span>Owner: Marlowe Emrys</span>
+                        </div>
+                    </article>
+
+                    <article class="roadmap-card">
+                        <div class="card-logo-slot">
+                            <img src="img/spring-break-amnesia.png" alt="Spring Break Amnesia logo highlighting global spring break takeovers, events, and VIP experiences">
+                        </div>
+                        <div class="card-project">Spring Break Amnesia</div>
+                        <a class="card-domain" href="https://springbreakamnesia.com" target="_blank" rel="noopener noreferrer">springbreakamnesia.com</a>
+                        <header>
+                            <span>Q2 2026</span>
+                            <span class="status active">Launch</span>
+                        </header>
+                        <ul class="milestones">
+                            <li>Global spring break takeovers &amp; highlight reels.</li>
+                            <li>Venue + brand matchmaking for epic events.</li>
+                            <li>Fan missions, VIP rewards, and exclusive drops.</li>
+                        </ul>
+                        <div class="timeline-meta">
+                            <span>Owner: Private</span>
+                        </div>
+                    </article>
+
+                    <article class="roadmap-card">
+                        <div class="card-logo-slot">
+                            <img src="img/find-your-genius.png" alt="Find Your Genius logo showcasing global youth talent empowerment and future-ready opportunities">
+                        </div>
+                        <div class="card-project">Find Your Genius</div>
+                        <a class="card-domain" href="https://findyourgenius.org" target="_blank" rel="noopener noreferrer">findyourgenius.org</a>
+                        <header>
+                            <span>Q1 2026</span>
+                            <span class="status status-vision">Vision</span>
+                        </header>
+                        <ul class="milestones">
+                            <li>Discover and empower youth talent worldwide.</li>
+                            <li>Unlock potential through AI-driven learning paths.</li>
+                            <li>Connect bright minds to future-ready opportunities.</li>
+                        </ul>
+                        <div class="timeline-meta">
+                            <span>Owner: Non-Profit</span>
+                        </div>
+                    </article>
+
+                    <article class="roadmap-card">
+                        <div class="card-logo-slot">
+                            <img src="img/tempora.png" alt="Tempora logo highlighting an onchain mini app that captures atmosphere and mints NFTs with sky, sun, and time signatures">
+                        </div>
+                        <div class="card-project">Tempora</div>
+                        <a class="card-domain" href="https://tempora.onchain" target="_blank" rel="noopener noreferrer">tempora.onchain</a>
+                        <header>
+                            <span>Q3 2026</span>
+                            <span class="status active">Planned</span>
+                        </header>
+                        <ul class="milestones">
+                            <li>Onchain mini app that captures the atmosphere around you.</li>
+                            <li>NFTs minted with signatures of sky, sun, and time.</li>
+                            <li>Transform natural moments into permanent digital art onchain.</li>
+                        </ul>
+                        <div class="timeline-meta">
+                            <span>Owner: Marlowe Emrys</span>
+                        </div>
+                    </article>
+
+                    <article class="roadmap-card">
+                        <div class="card-logo-slot">
+                            <img src="img/coin-swap-meet.png" alt="Coin Swap Meet logo conveying a marketplace turning crypto into tangible goods for collectors and enthusiasts worldwide">
+                        </div>
+                        <div class="card-project">Coin Swap Meet</div>
+                        <a class="card-domain" href="https://coinswapmeet.com" target="_blank" rel="noopener noreferrer">coinswapmeet.com</a>
+                        <header>
+                            <span>Q4 2026</span>
+                            <span class="status status-vision">Vision</span>
+                        </header>
+                        <ul class="milestones">
+                            <li>A marketplace turning crypto into tangible goods.</li>
+                            <li>Trade your favorite crypto for unique goods and collectibles.</li>
+                            <li>Connecting collectors and crypto enthusiasts worldwide.</li>
+                        </ul>
+                        <div class="timeline-meta">
+                            <span>Owner: Marlowe Emrys</span>
+                        </div>
+                    </article>
+
+                    <article class="roadmap-card">
+                        <div class="card-logo-slot">
+                            <img src="img/enjoyable-outings.png" alt="Enjoyable Outings logo inviting local activities, shared ideas, and crowdsourced outings through community requests">
+                        </div>
+                        <div class="card-project">Enjoyable Outings</div>
+                        <a class="card-domain" href="https://enjoyableoutings.com" target="_blank" rel="noopener noreferrer">enjoyableoutings.com</a>
+                        <header>
+                            <span>Q1 2027</span>
+                            <span class="status active">Discovery</span>
+                        </header>
+                        <ul class="milestones">
+                            <li>Connect with like-minded individuals through local activities.</li>
+                            <li>Suggest activities or join ideas shared by others.</li>
+                            <li>Crowdsource outings easily through Requests.</li>
+                        </ul>
+                        <div class="timeline-meta">
+                            <span>Owner: Marlowe Emrys</span>
+                        </div>
+                    </article>
+
+                    <article class="roadmap-card">
+                        <div class="card-logo-slot">
+                            <img src="img/the-brick-building.png" alt="The Brick Building logo reflecting a landmark hotel, restaurant, and work club built for connection, culture, and creativity">
+                        </div>
+                        <div class="card-project">The Brick Building</div>
+                        <a class="card-domain" href="https://thebrickbuilding.com" target="_blank" rel="noopener noreferrer">thebrickbuilding.com</a>
+                        <header>
+                            <span>Q1 2028</span>
+                            <span class="status status-vision">Vision</span>
+                        </header>
+                        <ul class="milestones">
+                            <li>A landmark brick building with hotel, restaurant, and work club.</li>
+                            <li>Stay and dine in a space designed for timeless experiences.</li>
+                            <li>Built for connection, enriched by culture and creativity.</li>
+                        </ul>
+                        <div class="timeline-meta">
+                            <span>Owner: e18n</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="window" id="faq" aria-labelledby="faq-title">
+                <div class="faq-wrapper mx-auto max-w-3xl lg:max-w-5xl px-4 lg:px-6">
+                    <h2 id="faq-title">Frequently Asked Questions</h2>
+                    <div class="faq-grid">
+                        <div class="faq-column" data-column="0">
+                            <article class="faq-item" id="faq-what-types-of-businesses-do-you-work-with">
+                                <h3 class="sr-only">What types of businesses do you work with?</h3>
+                                <button type="button" id="faq-trigger-what-types-of-businesses-do-you-work-with" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-what-types-of-businesses-do-you-work-with">
+                                    <span class="faq-question">What types of businesses do you work with?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-what-types-of-businesses-do-you-work-with" class="faq-panel" role="region" aria-labelledby="faq-trigger-what-types-of-businesses-do-you-work-with" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>We support businesses of all sizes — from early-stage startups to established enterprises. Partnering with companies worldwide, we provide digital solutions backed by strategy and strong project support. Our offerings adapt to different industries and growth stages, ensuring the right balance of creativity, technology, and execution to meet your goals.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="faq-item" id="faq-what-services-do-you-offer">
+                                <h3 class="sr-only">What services do you offer?</h3>
+                                <button type="button" id="faq-trigger-what-services-do-you-offer" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-what-services-do-you-offer">
+                                    <span class="faq-question">What services do you offer?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-what-services-do-you-offer" class="faq-panel" role="region" aria-labelledby="faq-trigger-what-services-do-you-offer" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>Our offerings span identity design, custom-built platforms, growth strategy, and private label solutions. We craft brand identities that resonate with audiences and endure over time, aligning creative direction with your business goals to strengthen your market presence. From concept to launch, we design and develop digital platforms that scale with your business, delivering tailored solutions through design-to-code execution, integrations, and analytics. To support sustainable growth, we provide strategic roadmapping and hands-on project support, turning goals into clear, measurable results. For agencies and partners, our private label solutions offer ready-to-use digital products and services that can be rebranded as their own, providing flexible and scalable ways to expand their offerings.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="faq-item" id="faq-what-are-your-products">
+                                <h3 class="sr-only">What are your products?</h3>
+                                <button type="button" id="faq-trigger-what-are-your-products" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-what-are-your-products">
+                                    <span class="faq-question">What are your products?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-what-are-your-products" class="faq-panel" role="region" aria-labelledby="faq-trigger-what-are-your-products" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>Our products are innovations currently in development. They’re designed to evolve into scalable solutions and are open to collaboration or sponsorship opportunities, giving partners a chance to shape their direction while gaining value from early involvement.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="faq-item" id="faq-how-can-i-schedule-a-call">
+                                <h3 class="sr-only">How can I schedule a call?</h3>
+                                <button type="button" id="faq-trigger-how-can-i-schedule-a-call" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-how-can-i-schedule-a-call">
+                                    <span class="faq-question">How can I schedule a call?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-how-can-i-schedule-a-call" class="faq-panel" role="region" aria-labelledby="faq-trigger-how-can-i-schedule-a-call" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>You can book a 15-minute video call directly through the Schedule section of our site. It’s a quick way to share your interests, explore opportunities, and chat through your ideas together so we can understand your goals and see how our solutions may align.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="faq-item" id="faq-do-you-provide-global-support">
+                                <h3 class="sr-only">Do you provide global support?</h3>
+                                <button type="button" id="faq-trigger-do-you-provide-global-support" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-do-you-provide-global-support">
+                                    <span class="faq-question">Do you provide global support?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-do-you-provide-global-support" class="faq-panel" role="region" aria-labelledby="faq-trigger-do-you-provide-global-support" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>Yes. We work with clients worldwide and ensure our digital solutions are accessible, adaptable, and effective across different regions and markets. Whether you’re a startup, growing business, or established enterprise, we deliver tailored digital solutions and strategic guidance that drive success.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="faq-item" id="faq-will-you-sign-an-nda-non-disclosure-agreement">
+                                <h3 class="sr-only">Will you sign an NDA (non-disclosure agreement)?</h3>
+                                <button type="button" id="faq-trigger-will-you-sign-an-nda-non-disclosure-agreement" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-will-you-sign-an-nda-non-disclosure-agreement">
+                                    <span class="faq-question">Will you sign an NDA (non-disclosure agreement)?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-will-you-sign-an-nda-non-disclosure-agreement" class="faq-panel" role="region" aria-labelledby="faq-trigger-will-you-sign-an-nda-non-disclosure-agreement" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>Yes. Protecting your ideas and information is a top priority. We’re happy to sign an NDA to ensure confidentiality and trust from the very beginning.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="faq-item" id="faq-how-will-we-communicate">
+                                <h3 class="sr-only">How will we communicate?</h3>
+                                <button type="button" id="faq-trigger-how-will-we-communicate" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-how-will-we-communicate">
+                                    <span class="faq-question">How will we communicate?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-how-will-we-communicate" class="faq-panel" role="region" aria-labelledby="faq-trigger-how-will-we-communicate" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>We’re flexible and adapt to what works best for you — whether that’s scheduled video calls, shared Slack channels, or email. In addition, we have our own centralized client platform coming soon, designed to make collaboration even easier by bringing updates, file sharing, invoices, and general communication together in one place.</p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="faq-item" id="faq-can-your-team-work-within-our-project-management-environment">
+                                <h3 class="sr-only">Can your team work within our project management environment?</h3>
+                                <button type="button" id="faq-trigger-can-your-team-work-within-our-project-management-environment" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-can-your-team-work-within-our-project-management-environment">
+                                    <span class="faq-question">Can your team work within our project management environment?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-can-your-team-work-within-our-project-management-environment" class="faq-panel" role="region" aria-labelledby="faq-trigger-can-your-team-work-within-our-project-management-environment" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>Absolutely. We’re comfortable adapting to your existing tools and workflows, whether that’s Jira, Asana, Trello, or another system. If needed, we’ll also recommend processes that streamline collaboration while fitting seamlessly into your style of project management.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="faq-item" id="faq-how-can-i-pay-for-your-services">
+                                <h3 class="sr-only">How can I pay for your services?</h3>
+                                <button type="button" id="faq-trigger-how-can-i-pay-for-your-services" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-how-can-i-pay-for-your-services">
+                                    <span class="faq-question">How can I pay for your services?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-how-can-i-pay-for-your-services" class="faq-panel" role="region" aria-labelledby="faq-trigger-how-can-i-pay-for-your-services" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>We accept all major credit cards, bank transfers, and Web3-friendly payments. For recurring needs, we also support subscription-style billing and invoicing to make payments simple and predictable.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="faq-item" id="faq-whats-the-average-turnaround-time">
+                                <h3 class="sr-only">What’s the average turnaround time?</h3>
+                                <button type="button" id="faq-trigger-whats-the-average-turnaround-time" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-whats-the-average-turnaround-time">
+                                    <span class="faq-question">What’s the average turnaround time?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-whats-the-average-turnaround-time" class="faq-panel" role="region" aria-labelledby="faq-trigger-whats-the-average-turnaround-time" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>Every project is unique, so timelines depend on scope, complexity, and urgency. Once we review your requirements, we’ll provide a detailed estimate along with options to accelerate delivery if needed.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="faq-item" id="faq-can-you-help-with-the-discovery-phase-and-requirement-gathering">
+                                <h3 class="sr-only">Can you help with the discovery phase and requirement gathering?</h3>
+                                <button type="button" id="faq-trigger-can-you-help-with-the-discovery-phase-and-requirement-gathering" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-can-you-help-with-the-discovery-phase-and-requirement-gathering">
+                                    <span class="faq-question">Can you help with the discovery phase and requirement gathering?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-can-you-help-with-the-discovery-phase-and-requirement-gathering" class="faq-panel" role="region" aria-labelledby="faq-trigger-can-you-help-with-the-discovery-phase-and-requirement-gathering" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>Yes. Discovery is often the most critical step in ensuring success. We’ll guide you through requirement gathering, research, and roadmapping so your project starts with a clear direction and realistic plan.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="faq-item" id="faq-do-i-need-my-own-staging-server">
+                                <h3 class="sr-only">Do I need my own staging server?</h3>
+                                <button type="button" id="faq-trigger-do-i-need-my-own-staging-server" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-do-i-need-my-own-staging-server">
+                                    <span class="faq-question">Do I need my own staging server?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-do-i-need-my-own-staging-server" class="faq-panel" role="region" aria-labelledby="faq-trigger-do-i-need-my-own-staging-server" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>Not necessarily. We can set up a secure staging environment on our servers for testing and review, or we can help configure one within your hosting environment to match production as closely as possible.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="faq-item" id="faq-do-you-provide-bug-fixes">
+                                <h3 class="sr-only">Do you provide bug fixes?</h3>
+                                <button type="button" id="faq-trigger-do-you-provide-bug-fixes" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-do-you-provide-bug-fixes">
+                                    <span class="faq-question">Do you provide bug fixes?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-do-you-provide-bug-fixes" class="faq-panel" role="region" aria-labelledby="faq-trigger-do-you-provide-bug-fixes" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>Yes. Bug fixes are included as part of our project guarantee during the post-delivery period. We also offer ongoing support for sites or platforms built by others, ensuring stability and reliability.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="faq-item" id="faq-do-you-offer-maintenance-on-delivered-sites">
+                                <h3 class="sr-only">Do you offer maintenance on delivered sites?</h3>
+                                <button type="button" id="faq-trigger-do-you-offer-maintenance-on-delivered-sites" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-do-you-offer-maintenance-on-delivered-sites">
+                                    <span class="faq-question">Do you offer maintenance on delivered sites?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-do-you-offer-maintenance-on-delivered-sites" class="faq-panel" role="region" aria-labelledby="faq-trigger-do-you-offer-maintenance-on-delivered-sites" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>Yes. We provide ongoing maintenance and support as an optional service. Whether the site was built by our team or inherited, we’ll audit it and create a maintenance plan tailored to your needs.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="faq-item" id="faq-do-you-have-partner-references-i-can-connect-with">
+                                <h3 class="sr-only">Do you have partner references I can connect with?</h3>
+                                <button type="button" id="faq-trigger-do-you-have-partner-references-i-can-connect-with" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-do-you-have-partner-references-i-can-connect-with">
+                                    <span class="faq-question">Do you have partner references I can connect with?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-do-you-have-partner-references-i-can-connect-with" class="faq-panel" role="region" aria-labelledby="faq-trigger-do-you-have-partner-references-i-can-connect-with" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>Yes. Many of our clients and partners are open to sharing their experience working with us. We’re proud to let their results and feedback speak for the quality of our work and service.</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="faq-item" id="faq-what-if-i-have-more-questions">
+                                <h3 class="sr-only">What if I have more questions?</h3>
+                                <button type="button" id="faq-trigger-what-if-i-have-more-questions" class="faq-trigger w-full text-left flex items-center justify-between gap-3" aria-expanded="false" aria-controls="faq-panel-what-if-i-have-more-questions">
+                                    <span class="faq-question">What if I have more questions?</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div id="faq-panel-what-if-i-have-more-questions" class="faq-panel" role="region" aria-labelledby="faq-trigger-what-if-i-have-more-questions" hidden>
+                                    <div class="faq-panel-content text-sm leading-6 lg:text-base lg:leading-7">
+                                        <p>We welcome any questions you have along the way. Our team is always available by email at crafted@marloweemrys.com, by phone at 303-219-0034, or through scheduled video calls. Once our centralized client platform launches, you’ll also have a single space to reach us, share ideas, and track project progress. Clear and open communication is at the core of how we work.</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="window calendar-window" id="schedule" aria-labelledby="schedule-title">
+                <h2 id="schedule-title">Schedule a 15-Minute Video Call with Marlowe Emrys</h2>
+                <p>Schedule a 15-minute video call to share your interests, explore opportunities, and chat through your ideas together. Review our <a href="#services">services</a> or the <a href="#products">product roadmap</a> before we connect, and see the <a href="#faq">Frequently Asked Questions</a> to align our solutions with your business.</p>
+                <!-- Cal inline embed code begins -->
+<div style="width:100%;height:100%;overflow:visible;background:transparent" id="my-cal-inline-15min"></div>
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "15min", {origin:"https://app.cal.com"});
+
+  Cal.ns["15min"]("inline", {
+    elementOrSelector:"#my-cal-inline-15min",
+    config: {"layout":"month_view","theme":"light"},
+    calLink: "marloweemrys/15min",
+  });
+
+  Cal.ns["15min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view","theme":"light","styles":{"branding":{"backgroundColor":"#ffffff","primaryColor":"#c98a4f"}}});
+  </script>
+  <!-- Cal inline embed code ends -->
+            </section>
+        </main>
+
+        <footer class="dock" id="support">
+            <p class="dock-text">© MARLOWE EMRYS 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqSection = document.getElementById('faq');
+            if (!faqSection) {
+                return;
+            }
+
+            const supportsInert = 'inert' in document.createElement('div');
+            const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+            const entries = [];
+            const groups = new Map();
+
+            faqSection.querySelectorAll('.faq-trigger').forEach(function (trigger) {
+                const panelId = trigger.getAttribute('aria-controls');
+                if (!panelId) {
+                    return;
+                }
+
+                const panel = document.getElementById(panelId);
+                if (!panel) {
+                    return;
+                }
+
+                const item = trigger.closest('.faq-item');
+                if (!item) {
+                    return;
+                }
+
+                const column = trigger.closest('.faq-column');
+                const columnKey = column && column.dataset.column ? column.dataset.column : 'default';
+
+                const entry = { trigger, panel, item, columnKey };
+                entries.push(entry);
+
+                if (!groups.has(columnKey)) {
+                    groups.set(columnKey, []);
+                }
+
+                groups.get(columnKey).push(entry);
+
+                collapseEntry(entry, { immediate: true });
+
+                trigger.addEventListener('click', function () {
+                    handleToggle(entry);
+                });
+            });
+
+            if (!entries.length) {
+                return;
+            }
+
+            window.addEventListener('hashchange', function () {
+                syncFromHash({ source: 'hashchange' });
+            });
+
+            window.addEventListener('popstate', function () {
+                syncFromHash({ source: 'popstate' });
+            });
+
+            syncFromHash({ source: 'init' });
+
+            function handleToggle(entry) {
+                const isExpanded = entry.trigger.getAttribute('aria-expanded') === 'true';
+                if (isExpanded) {
+                    collapseEntry(entry);
+                    updateHash('faq', { push: true });
+                    return;
+                }
+
+                expandEntry(entry, { scroll: true });
+            }
+
+            function collapseEntry(entry, options) {
+                const opts = options || {};
+                const immediate = Boolean(opts.immediate);
+                const { trigger, panel } = entry;
+
+                trigger.setAttribute('aria-expanded', 'false');
+
+                if (supportsInert) {
+                    panel.inert = true;
+                }
+
+                const skipAnimation = immediate || reduceMotionQuery.matches;
+
+                if (skipAnimation) {
+                    panel.hidden = true;
+                    panel.dataset.state = 'closed';
+                    panel.style.maxHeight = '0px';
+                    return;
+                }
+
+                if (panel.hidden) {
+                    panel.dataset.state = 'closed';
+                    panel.style.maxHeight = '0px';
+                    return;
+                }
+
+                panel.dataset.state = 'closing';
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+
+                requestAnimationFrame(function () {
+                    panel.style.maxHeight = '0px';
+                });
+
+                panel.addEventListener('transitionend', function handleClose(event) {
+                    if (event.target !== panel || event.propertyName !== 'max-height') {
+                        return;
+                    }
+
+                    panel.hidden = true;
+                    panel.dataset.state = 'closed';
+                    panel.removeEventListener('transitionend', handleClose);
+                });
+            }
+
+            function expandEntry(entry, options) {
+                const opts = options || {};
+                const scroll = Boolean(opts.scroll);
+                const immediate = Boolean(opts.immediate);
+                const skipHash = Boolean(opts.skipHash);
+                const { trigger, panel, item, columnKey } = entry;
+
+                const siblings = groups.get(columnKey) || [];
+                siblings.forEach(function (sibling) {
+                    if (sibling !== entry) {
+                        collapseEntry(sibling);
+                    }
+                });
+
+                trigger.setAttribute('aria-expanded', 'true');
+
+                if (supportsInert) {
+                    panel.inert = false;
+                }
+
+                panel.hidden = false;
+
+                const skipAnimation = immediate || reduceMotionQuery.matches;
+
+                if (skipAnimation) {
+                    panel.dataset.state = 'open';
+                    panel.style.maxHeight = 'none';
+                } else {
+                    panel.dataset.state = 'opening';
+                    panel.style.maxHeight = '0px';
+
+                    requestAnimationFrame(function () {
+                        panel.style.maxHeight = panel.scrollHeight + 'px';
+                    });
+
+                    panel.addEventListener('transitionend', function handleOpen(event) {
+                        if (event.target !== panel || event.propertyName !== 'max-height') {
+                            return;
+                        }
+
+                        panel.dataset.state = 'open';
+                        panel.style.maxHeight = 'none';
+                        panel.removeEventListener('transitionend', handleOpen);
+                    });
+                }
+
+                if (!skipHash) {
+                    updateHash(item.id, { push: true });
+                }
+
+                if (scroll) {
+                    const behavior = reduceMotionQuery.matches ? 'auto' : 'smooth';
+                    item.scrollIntoView({ behavior: behavior, block: 'nearest', inline: 'nearest' });
+                }
+            }
+
+            function syncFromHash(context) {
+                const source = context && context.source ? context.source : 'direct';
+                const hash = window.location.hash.replace('#', '');
+
+                if (!hash) {
+                    return;
+                }
+
+                if (hash === 'faq') {
+                    entries.forEach(function (entry) {
+                        collapseEntry(entry, { immediate: source === 'init' });
+                    });
+                    return;
+                }
+
+                const entry = entries.find(function (candidate) {
+                    return candidate.item.id === hash;
+                });
+
+                if (!entry) {
+                    return;
+                }
+
+                expandEntry(entry, {
+                    immediate: source === 'init',
+                    skipHash: true,
+                    scroll: source !== 'init'
+                });
+            }
+
+            function updateHash(id, options) {
+                const opts = options || {};
+                const push = Boolean(opts.push);
+                const replace = Boolean(opts.replace);
+                const targetHash = '#' + id;
+
+                if (window.location.hash === targetHash) {
+                    return;
+                }
+
+                if (replace && history.replaceState) {
+                    history.replaceState(null, '', targetHash);
+                    return;
+                }
+
+                if (push && history.pushState) {
+                    history.pushState(null, '', targetHash);
+                    return;
+                }
+
+                window.location.hash = id;
+            }
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://marloweemrys.com/#organization",
+                "name": "Marlowe Emrys",
+                "url": "https://marloweemrys.com/",
+                "logo": "https://marloweemrys.com/img/marloweemrys.png",
+                "description": "Marlowe Emrys digital solutions guide businesses of all sizes with branding, digital products, and advisory support."
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://marloweemrys.com/#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What types of businesses do you work with?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We support businesses of all sizes — from early-stage startups to established enterprises. Partnering with companies worldwide, we provide digital solutions backed by strategy and strong project support. Our offerings adapt to different industries and growth stages, ensuring the right balance of creativity, technology, and execution to meet your goals."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What services do you offer?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Our offerings span identity design, custom-built platforms, growth strategy, and private label solutions. We craft brand identities that resonate with audiences and endure over time, aligning creative direction with your business goals to strengthen your market presence. From concept to launch, we design and develop digital platforms that scale with your business, delivering tailored solutions through design-to-code execution, integrations, and analytics. To support sustainable growth, we provide strategic roadmapping and hands-on project support, turning goals into clear, measurable results. For agencies and partners, our private label solutions offer ready-to-use digital products and services that can be rebranded as their own, providing flexible and scalable ways to expand their offerings."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What are your products?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Our products are innovations currently in development. They’re designed to evolve into scalable solutions and are open to collaboration or sponsorship opportunities, giving partners a chance to shape their direction while gaining value from early involvement."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How can I schedule a call?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "You can book a 15-minute video call directly through the Schedule section of our site. It’s a quick way to share your interests, explore opportunities, and chat through your ideas together so we can understand your goals and see how our solutions may align."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do you provide global support?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. We work with clients worldwide and ensure our digital solutions are accessible, adaptable, and effective across different regions and markets. Whether you’re a startup, growing business, or established enterprise, we deliver tailored digital solutions and strategic guidance that drive success."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Will you sign an NDA (non-disclosure agreement)?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Protecting your ideas and information is a top priority. We’re happy to sign an NDA to ensure confidentiality and trust from the very beginning."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How will we communicate?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We’re flexible and adapt to what works best for you — whether that’s scheduled video calls, shared Slack channels, or email. In addition, we have our own centralized client platform coming soon, designed to make collaboration even easier by bringing updates, file sharing, invoices, and general communication together in one place."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can your team work within our project management environment?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Absolutely. We’re comfortable adapting to your existing tools and workflows, whether that’s Jira, Asana, Trello, or another system. If needed, we’ll also recommend processes that streamline collaboration while fitting seamlessly into your style of project management."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How can I pay for your services?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We accept all major credit cards, bank transfers, and Web3-friendly payments. For recurring needs, we also support subscription-style billing and invoicing to make payments simple and predictable."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What’s the average turnaround time?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Every project is unique, so timelines depend on scope, complexity, and urgency. Once we review your requirements, we’ll provide a detailed estimate along with options to accelerate delivery if needed."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can you help with the discovery phase and requirement gathering?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Discovery is often the most critical step in ensuring success. We’ll guide you through requirement gathering, research, and roadmapping so your project starts with a clear direction and realistic plan."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I need my own staging server?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Not necessarily. We can set up a secure staging environment on our servers for testing and review, or we can help configure one within your hosting environment to match production as closely as possible."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do you provide bug fixes?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Bug fixes are included as part of our project guarantee during the post-delivery period. We also offer ongoing support for sites or platforms built by others, ensuring stability and reliability."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do you offer maintenance on delivered sites?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. We provide ongoing maintenance and support as an optional service. Whether the site was built by our team or inherited, we’ll audit it and create a maintenance plan tailored to your needs."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do you have partner references I can connect with?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Many of our clients and partners are open to sharing their experience working with us. We’re proud to let their results and feedback speak for the quality of our work and service."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What if I have more questions?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We welcome any questions you have along the way. Our team is always available by email at crafted@marloweemrys.com, by phone at 303-219-0034, or through scheduled video calls. Once our centralized client platform launches, you’ll also have a single space to reach us, share ideas, and track project progress. Clear and open communication is at the core of how we work."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <script>
+        function formatTime(date) {
+            const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            let hours = date.getHours();
+            const minutes = String(date.getMinutes()).padStart(2, "0");
+            const suffix = hours >= 12 ? "PM" : "AM";
+            hours = hours % 12 || 12;
+            return days[date.getDay()] + " " + hours + ":" + minutes + " " + suffix;
+        }
+
+        function updateClocks() {
+            const now = new Date();
+            const stamp = formatTime(now);
+            const menuClock = document.getElementById("menu-clock");
+            if (menuClock) {
+                menuClock.textContent = stamp;
+            }
+        }
+
+        updateClocks();
+        setInterval(updateClocks, 30000);
+    </script>
+</body>
+</html>
