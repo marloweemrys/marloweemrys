@@ -1944,12 +1944,6 @@
     allowfullscreen
   ></iframe>
 </div>
-<div class="calendar-embed-mobile-cta">
-  <p>Open the scheduler in a dedicated view for the best mobile experience.</p>
-  <a class="calendar-embed-button" href="https://mirror.glasscrm.app/schedule/consultation" target="_blank" rel="noopener">
-    Launch Scheduler
-  </a>
-</div>
 <script>
 
   (function() {
@@ -2005,55 +1999,12 @@
 
   @media (max-width: 768px) {
     .calendar-embed-container {
-      display: none;
+      padding: 0.75rem;
     }
 
     .calendar-embed-container iframe {
       min-height: 0;
     }
-
-    .calendar-embed-mobile-cta {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 1.25rem;
-      text-align: center;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 16px 40px rgba(48, 41, 33, 0.08);
-    }
-
-    .calendar-embed-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.75rem 1.75rem;
-      border-radius: 999px;
-      background-color: #c98a4f;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      transition: background-color 0.2s ease, transform 0.2s ease;
-    }
-
-    .calendar-embed-button:focus-visible,
-    .calendar-embed-button:hover {
-      background-color: #b4763a;
-      transform: translateY(-1px);
-    }
-  }
-
-  .calendar-embed-mobile-cta {
-    display: none;
-  }
-
-  .calendar-embed-mobile-cta p {
-    margin: 0;
-    color: #5b5f68;
-    font-size: 0.95rem;
-    line-height: 1.5;
   }
 
 </style>
