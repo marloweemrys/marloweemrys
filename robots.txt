@@ -1,0 +1,11 @@
+# robots.txt for marloweemrys.com
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://marloweemrys.com/sitemap.xml
+
+# Crawl-delay for considerate bots
+Crawl-delay: 1
