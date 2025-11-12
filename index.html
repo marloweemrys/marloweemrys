@@ -191,7 +191,7 @@
         .hero {
             text-align: center;
             display: grid;
-            gap: 24px;
+            gap: 32px;
             justify-items: center;
         }
 
@@ -315,6 +315,239 @@
             }
         }
 
+        /* OS Window Title Styles */
+        .hero-title-os {
+            background: none !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            padding: 20px 0 !important;
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            overflow: visible !important;
+            isolation: auto !important;
+        }
+
+        .hero-title-os::before,
+        .hero-title-os::after {
+            display: none !important;
+            content: none !important;
+            opacity: 0 !important;
+        }
+
+        .os-window {
+            width: 95%;
+            max-width: 1400px;
+            background: rgba(31, 36, 48, 0.98);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6),
+                        0 0 0 1.5px rgba(201, 138, 79, 0.25);
+            backdrop-filter: blur(20px);
+            transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+                        box-shadow 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .os-window:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.65),
+                        0 0 0 1.5px rgba(201, 138, 79, 0.35);
+        }
+
+        .os-window-header {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 20px;
+            padding: 18px 28px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-bottom: 1px solid rgba(201, 138, 79, 0.25);
+        }
+
+        .os-window-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-self: start;
+            flex-shrink: 0;
+        }
+
+        .os-control {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s;
+            opacity: 1;
+        }
+
+        .os-control:hover {
+            transform: scale(1.15);
+            opacity: 1;
+        }
+
+        .os-control-close {
+            background: linear-gradient(135deg, #ff5f57 0%, #ff3b30 100%);
+            box-shadow: 0 0 8px rgba(255, 59, 48, 0.3);
+        }
+
+        .os-control-minimize {
+            background: linear-gradient(135deg, #ffbd2e 0%, #ffa500 100%);
+            box-shadow: 0 0 8px rgba(255, 165, 0, 0.3);
+        }
+
+        .os-control-maximize {
+            background: linear-gradient(135deg, #28c840 0%, #00d084 100%);
+            box-shadow: 0 0 8px rgba(0, 208, 132, 0.3);
+        }
+
+        .os-window-title {
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+            font-size: 16px;
+            font-weight: 600;
+            color: rgba(201, 138, 79, 1);
+            letter-spacing: 0.5px;
+            text-align: center;
+            justify-self: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-width: 0;
+        }
+
+        .os-window-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'SF Mono', 'Monaco', monospace;
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(201, 138, 79, 1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            justify-self: end;
+            white-space: nowrap;
+        }
+
+        .status-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #00d084;
+            box-shadow: 0 0 12px rgba(0, 208, 132, 0.9);
+            animation: statusPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes statusPulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.6;
+                transform: scale(0.9);
+            }
+        }
+
+        .status-text {
+            line-height: 1;
+        }
+
+        .os-window-content {
+            padding: 0;
+            position: relative;
+            background: linear-gradient(180deg, rgba(31, 36, 48, 0.6) 0%, rgba(15, 18, 24, 0.5) 100%);
+        }
+
+        .hero-title-svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Responsive OS window */
+        @media (max-width: 1024px) {
+            .os-window {
+                width: 92%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title-os {
+                padding: 20px 0;
+            }
+
+            .os-window {
+                width: 95%;
+                border-radius: 14px;
+            }
+
+            .os-window-header {
+                padding: 14px 20px;
+                gap: 16px;
+                grid-template-columns: auto 1fr auto;
+            }
+
+            .os-control {
+                width: 14px;
+                height: 14px;
+            }
+
+            .os-window-title {
+                font-size: 13px;
+            }
+
+            .os-window-status {
+                font-size: 10px;
+                gap: 6px;
+            }
+
+            .status-indicator {
+                width: 8px;
+                height: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title-os {
+                padding: 15px 0;
+            }
+
+            .os-window {
+                width: 98%;
+                border-radius: 12px;
+            }
+
+            .os-window-header {
+                padding: 12px 14px;
+                gap: 12px;
+                grid-template-columns: auto 1fr auto;
+            }
+
+            .os-control {
+                width: 11px;
+                height: 11px;
+            }
+
+            .os-window-title {
+                font-size: 11px;
+            }
+
+            .os-window-status {
+                font-size: 8px;
+                gap: 4px;
+            }
+
+            .status-text {
+                display: none;
+            }
+
+            .status-indicator {
+                width: 7px;
+                height: 7px;
+            }
+        }
+
         @keyframes heroTitleAurora {
             0% {
                 transform: rotate(0deg) scale(1.03);
@@ -351,7 +584,7 @@
         }
 
         .hero-logo {
-            width: clamp(260px, 60%, 420px);
+            width: clamp(200px, 40%, 320px);
             max-width: 100%;
             height: auto;
             display: block;
@@ -393,14 +626,21 @@
         }
 
         .hero-badge {
-            padding: 10px 18px;
-            border-radius: 999px;
-            border: 1px solid rgba(201, 138, 79, 0.28);
-            background: rgba(201, 138, 79, 0.12);
-            color: var(--accent);
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid rgba(201, 138, 79, 0.4);
+            background: rgba(31, 36, 48, 0.85);
+            color: #f5e5d3;
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
             font-size: 13px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            backdrop-filter: blur(8px);
+        }
+
+        .badge-tag {
+            color: #ffb96d;
+            font-weight: 700;
+            margin-right: 6px;
         }
 
         .hero-actions {
@@ -412,39 +652,62 @@
 
         .button {
             padding: 14px 28px;
-            border-radius: 14px;
+            border-radius: 8px;
             font-weight: 600;
             font-size: 15px;
             border: none;
             cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
         }
 
         .button:focus-visible {
-            outline: 3px solid rgba(255, 79, 106, 0.32);
+            outline: 3px solid rgba(201, 138, 79, 0.4);
             outline-offset: 3px;
         }
 
+        .button-terminal {
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .terminal-prompt {
+            color: #ffb96d;
+            margin-right: 4px;
+            font-weight: 700;
+        }
+
         .button-primary {
-            background: linear-gradient(135deg, #ffb96d, #ff4f6a);
-            color: #1f2430;
-            box-shadow: 0 14px 30px rgba(255, 79, 106, 0.28);
+            background: linear-gradient(135deg, rgba(31, 36, 48, 0.95), rgba(42, 48, 60, 0.95));
+            color: #f5e5d3;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3),
+                        0 0 0 1px rgba(201, 138, 79, 0.3);
+            border: 1px solid rgba(201, 138, 79, 0.2);
         }
 
         .button-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 18px 36px rgba(255, 79, 106, 0.38);
+            background: linear-gradient(135deg, rgba(31, 36, 48, 1), rgba(42, 48, 60, 1));
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4),
+                        0 0 0 1px rgba(201, 138, 79, 0.5);
+            color: #ffffff;
         }
 
         .button-secondary {
-            background: var(--cta-secondary);
-            color: var(--text-primary);
-            box-shadow: inset 0 0 0 1px rgba(201, 138, 79, 0.2);
+            background: rgba(31, 36, 48, 0.75);
+            color: #f5e5d3;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2),
+                        inset 0 0 0 1px rgba(201, 138, 79, 0.25);
+            border: 1px solid rgba(201, 138, 79, 0.15);
+            backdrop-filter: blur(8px);
         }
 
         .button-secondary:hover {
             transform: translateY(-2px);
-            box-shadow: inset 0 0 0 1px rgba(201, 138, 79, 0.32);
+            background: rgba(31, 36, 48, 0.9);
+            color: #ffffff;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3),
+                        inset 0 0 0 1px rgba(201, 138, 79, 0.35);
         }
 
         .window {
@@ -1297,7 +1560,7 @@
             }
 
             .hero-logo {
-                width: min(380px, 100%);
+                width: min(280px, 100%);
             }
 
             .desktop-content {
@@ -1386,19 +1649,77 @@
         <main class="desktop-content">
             <section class="hero" id="about">
                 <img class="hero-logo" src="img/marloweemrys.png" alt="Marlowe Emrys digital solutions mark representing expertly crafted strategy and design for businesses of all sizes worldwide">
-                <h1 class="hero-title">
-                    <span class="hero-title__text">Marlowe Emrys Digital Solutions for Business Growth</span>
+                <h1 class="hero-title hero-title-os">
+                    <div class="os-window">
+                        <div class="os-window-header">
+                            <div class="os-window-controls">
+                                <span class="os-control os-control-close"></span>
+                                <span class="os-control os-control-minimize"></span>
+                                <span class="os-control os-control-maximize"></span>
+                            </div>
+                            <div class="os-window-title">system.core.identity</div>
+                            <div class="os-window-status">
+                                <span class="status-indicator"></span>
+                                <span class="status-text">ACTIVE</span>
+                            </div>
+                        </div>
+                        <div class="os-window-content">
+                            <svg class="hero-title-svg" viewBox="0 0 1000 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                                <defs>
+                                    <linearGradient id="osGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#e8c9a6;stop-opacity:1">
+                                            <animate attributeName="stop-color" values="#e8c9a6;#f5e5d3;#e8c9a6" dur="6s" repeatCount="indefinite"/>
+                                        </stop>
+                                        <stop offset="50%" style="stop-color:#d4a574;stop-opacity:1"/>
+                                        <stop offset="100%" style="stop-color:#c98a4f;stop-opacity:1">
+                                            <animate attributeName="stop-color" values="#c98a4f;#d4a574;#c98a4f" dur="6s" repeatCount="indefinite"/>
+                                        </stop>
+                                    </linearGradient>
+                                    <pattern id="scanlines" x="0" y="0" width="100%" height="4" patternUnits="userSpaceOnUse">
+                                        <line x1="0" y1="0" x2="100%" y2="0" stroke="rgba(201, 138, 79, 0.06)" stroke-width="1"/>
+                                    </pattern>
+                                    <pattern id="grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(201, 138, 79, 0.15)" stroke-width="0.5"/>
+                                    </pattern>
+                                    <filter id="terminalGlow">
+                                        <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                                        <feFlood flood-color="#e8c9a6" flood-opacity="0.5" result="glowColor"/>
+                                        <feComposite in="glowColor" in2="coloredBlur" operator="in" result="softGlow"/>
+                                        <feMerge>
+                                            <feMergeNode in="softGlow"/>
+                                            <feMergeNode in="softGlow"/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+                                <rect x="0" y="0" width="1000" height="280" fill="url(#grid)" opacity="0.25"/>
+                                <rect x="0" y="0" width="1000" height="280" fill="url(#scanlines)" opacity="0.6"/>
+                                <text x="40" y="60" font-family="'SF Mono', 'Monaco', 'Courier New', monospace" font-size="20" font-weight="600" fill="#e8c9a6" opacity="0.9">$ system.init --identity</text>
+                                <text x="40" y="135" font-family="system-ui, -apple-system, 'SF Pro Display', sans-serif" font-size="68" font-weight="700" letter-spacing="-2" fill="url(#osGradient)" filter="url(#terminalGlow)">Marlowe Emrys Digital Solutions</text>
+                                <text x="40" y="185" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="500" fill="url(#osGradient)" opacity="1">for Business Growth</text>
+                                <g opacity="0.75">
+                                    <text x="40" y="230" font-family="'SF Mono', 'Monaco', monospace" font-size="16" fill="#e8c9a6">[✓] Identity loaded</text>
+                                    <text x="260" y="230" font-family="'SF Mono', 'Monaco', monospace" font-size="16" fill="#d4a574">[✓] Vision active</text>
+                                    <text x="460" y="230" font-family="'SF Mono', 'Monaco', monospace" font-size="16" fill="#c98a4f">[✓] Systems online</text>
+                                </g>
+                                <rect x="710" y="175" width="16" height="4" fill="#e8c9a6"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></rect>
+                                <rect x="0" y="260" width="1000" height="20" fill="rgba(31, 36, 48, 0.5)"/>
+                                <rect x="0" y="260" width="200" height="20" fill="url(#osGradient)" opacity="0.6"><animate attributeName="width" values="0;1000;0" dur="8s" repeatCount="indefinite"/></rect>
+                                <text x="20" y="274" font-family="'SF Mono', 'Monaco', monospace" font-size="12" fill="#e8c9a6" opacity="1">READY • ENERGY: 100% • PID: 2847</text>
+                            </svg>
+                        </div>
+                    </div>
                 </h1>
                 <h2 class="hero-lede">Partnering with startups, growing businesses, and enterprises worldwide, we provide crafted digital solutions backed by strategy and strong project support.</h2>
                 <p class="hero-summary">Marlowe Emrys digital solutions help organizations—from emerging startups to established enterprises—navigate growth with crafted support grounded in strategy, design, and technology across identity design &amp; strategy, custom-built platforms, business growth strategy, and private label solutions. Explore our <a href="#services">services</a>, review the <a href="#products">product roadmap</a>, see the <a href="#faq">Frequently Asked Questions</a>, and <a href="#schedule">schedule</a> a 15-minute video call.</p>
                 <div class="hero-badges" role="list">
-                    <div class="hero-badge" role="listitem">Web3-Friendly Payments</div>
-                    <div class="hero-badge" role="listitem">Custom-Built Platforms</div>
-                    <div class="hero-badge" role="listitem">Denver HQ · Global Reach</div>
+                    <div class="hero-badge" role="listitem"><span class="badge-tag">[web3]</span> Crypto-Friendly Payments</div>
+                    <div class="hero-badge" role="listitem"><span class="badge-tag">[build]</span> Custom Platforms</div>
+                    <div class="hero-badge" role="listitem"><span class="badge-tag">[global]</span> Denver HQ · Worldwide</div>
                 </div>
                 <div class="hero-actions">
-                    <a class="button button-primary" href="#products">Product Roadmap</a>
-                    <a class="button button-secondary" href="#schedule">Let's Connect</a>
+                    <a class="button button-terminal button-primary" href="#products"><span class="terminal-prompt">$ ./</span>product-roadmap</a>
+                    <a class="button button-terminal button-secondary" href="#schedule"><span class="terminal-prompt">$ ./</span>lets-connect</a>
                 </div>
             </section>
 
