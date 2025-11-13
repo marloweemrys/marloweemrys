@@ -608,6 +608,7 @@
             max-width: 100%;
             height: auto;
             display: block;
+            margin: 0 auto;
         }
 
         .hero-lede {
@@ -823,7 +824,7 @@
             font-weight: 600;
             letter-spacing: -0.01em;
             line-height: 1.3;
-            white-space: nowrap;
+            white-space: normal;
         }
 
         .service-card h3::before {
@@ -1781,6 +1782,63 @@
 
             .desktop-content {
                 padding: 28px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                display: block;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+
+            .desktop-frame {
+                width: 100%;
+                min-height: auto;
+                border-radius: 18px;
+                box-shadow: none;
+            }
+
+            .desktop-frame::before {
+                display: none;
+            }
+
+            .desktop-content {
+                padding: 24px 20px 32px;
+                gap: 24px;
+            }
+
+            .menu-bar {
+                width: 100%;
+                position: static;
+            }
+
+            .menu-left,
+            .menu-right {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .menu-right {
+                gap: 10px;
+            }
+
+            .menu-right .menu-status {
+                flex: 1 1 120px;
+                justify-content: center;
+            }
+
+            .hero {
+                text-align: left;
+                justify-items: stretch;
+            }
+
+            .hero-summary,
+            .hero-lede {
+                text-align: left;
+                margin-left: 0;
+                margin-right: 0;
             }
         }
 
