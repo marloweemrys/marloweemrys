@@ -901,6 +901,43 @@
             border-color: rgba(201, 138, 79, 0.35);
         }
 
+        /* Products Light Terminal Styles */
+        #products.window {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250, 247, 242, 0.95));
+            border: 1px solid rgba(201, 138, 79, 0.25);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+        }
+
+        #products h2 {
+            color: #1f2430;
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        #products h2::before {
+            content: '$ ./';
+            color: #c98a4f;
+            margin-right: 8px;
+        }
+
+        #products > p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        #products > p a {
+            color: #c98a4f;
+            text-decoration: underline;
+            text-decoration-color: rgba(201, 138, 79, 0.3);
+            transition: text-decoration-color 0.2s ease;
+        }
+
+        #products > p a:hover {
+            text-decoration-color: rgba(201, 138, 79, 0.8);
+        }
+
         .roadmap-keywords {
             margin-bottom: 20px;
         }
