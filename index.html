@@ -747,11 +747,48 @@
             line-height: 1.6;
         }
 
+        /* Services Terminal Styles */
+        #services.window {
+            background: rgba(31, 36, 48, 0.98);
+            border: 1px solid rgba(201, 138, 79, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        #services h2 {
+            color: #e8c9a6;
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        #services h2::before {
+            content: '$ ./';
+            color: #ffb96d;
+            margin-right: 8px;
+        }
+
+        #services .punchline {
+            color: #d4a574;
+            line-height: 1.7;
+        }
+
+        #services .punchline a {
+            color: #ffb96d;
+            text-decoration: underline;
+            text-decoration-color: rgba(255, 185, 109, 0.3);
+            transition: text-decoration-color 0.2s ease;
+        }
+
+        #services .punchline a:hover {
+            text-decoration-color: rgba(255, 185, 109, 0.8);
+        }
+
         .service-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(240px, 1fr));
-            gap: 24px;
-            margin-top: 24px;
+            gap: 20px;
+            margin-top: 32px;
         }
 
         @media (max-width: 720px) {
@@ -761,44 +798,79 @@
         }
 
         .service-card {
-            padding: 22px;
-            border-radius: 20px;
-            border: 1px solid rgba(201, 138, 79, 0.18);
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(246, 242, 236, 0.92));
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid rgba(201, 138, 79, 0.25);
+            background: rgba(31, 36, 48, 0.6);
             display: grid;
-            gap: 14px;
+            gap: 16px;
             text-align: left;
+            transition: background 0.2s ease, border-color 0.2s ease;
         }
 
-        .service-desc {
-            margin: 0;
-            font-size: 15px;
-            line-height: 1.6;
-            color: var(--text-secondary);
+        .service-card:hover {
+            background: rgba(31, 36, 48, 0.8);
+            border-color: rgba(201, 138, 79, 0.4);
         }
 
         .service-card h3 {
             margin: 0;
             font-size: 18px;
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+            color: #f5e5d3;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .service-card h3::before {
+            content: '[service] ';
+            color: #00d084;
+            font-weight: 700;
+            margin-right: 6px;
+            font-size: 14px;
+        }
+
+        .service-desc {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #d4a574;
         }
 
         .service-card ul {
             margin: 0;
-            padding-left: 18px;
+            padding-left: 0;
             display: grid;
-            gap: 6px;
-            color: var(--text-secondary);
+            gap: 8px;
+            color: #c98a4f;
             font-size: 14px;
-            line-height: 1.55;
+            line-height: 1.6;
+            list-style: none;
+        }
+
+        .service-card ul li {
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .service-card ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #ffb96d;
+            font-weight: 700;
         }
 
         .service-card ul.keyword-tags {
             margin: 8px 0 0;
             padding: 0;
-            list-style: none;
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
+        }
+
+        .service-card ul.keyword-tags li::before {
+            display: none;
         }
 
         .keyword-tags {
@@ -808,11 +880,21 @@
         }
 
         .keyword-tag {
-            padding: 6px 10px;
-            border-radius: 10px;
-            background: rgba(201, 138, 79, 0.14);
-            color: var(--accent);
-            font-size: 12px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: rgba(15, 18, 24, 0.6);
+            border: 1px solid rgba(201, 138, 79, 0.3);
+            color: #ffb96d;
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            transition: background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .keyword-tag:hover {
+            background: rgba(15, 18, 24, 0.8);
+            border-color: rgba(201, 138, 79, 0.5);
         }
 
         .roadmap-keywords {
@@ -1804,7 +1886,7 @@
                     </div>
                 </h1>
                 <h2 class="hero-lede">Partnering with startups, growing businesses, and enterprises worldwide, we provide crafted digital solutions backed by strategy and strong project support.</h2>
-                <p class="hero-summary">Marlowe Emrys digital solutions help organizations—from emerging startups to established enterprises—navigate growth with crafted support grounded in strategy, design, and technology across identity design &amp; strategy, custom-built platforms, business growth strategy, and private label solutions. Explore our <a href="#services">services</a>, review the <a href="#products">product roadmap</a>, see the <a href="#faq">Frequently Asked Questions</a>, and <a href="#schedule">schedule</a> a 15-minute video call.</p>
+                <p class="hero-summary">We support teams at every stage of growth through clear strategy, intentional design, and reliable technology. From identity and platform development to growth planning and private label solutions, everything is crafted with purpose. Explore our <a href="#services">services</a>, review the <a href="#products">product roadmap</a>, read the <a href="#faq">FAQs</a>, and <a href="#schedule">schedule</a> a 15 minute video call.</p>
                 <div class="hero-badges" role="list">
                     <div class="hero-badge" role="listitem"><span class="badge-tag">[web3]</span> Crypto-Friendly Payments</div>
                     <div class="hero-badge" role="listitem"><span class="badge-tag">[build]</span> Custom Platforms</div>
