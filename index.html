@@ -747,15 +747,15 @@
             line-height: 1.6;
         }
 
-        /* Services Terminal Styles */
+        /* Services Light Terminal Styles */
         #services.window {
-            background: rgba(31, 36, 48, 0.98);
-            border: 1px solid rgba(201, 138, 79, 0.3);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250, 247, 242, 0.95));
+            border: 1px solid rgba(201, 138, 79, 0.25);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
         }
 
         #services h2 {
-            color: #e8c9a6;
+            color: #1f2430;
             font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
             font-size: 24px;
             font-weight: 700;
@@ -764,24 +764,24 @@
 
         #services h2::before {
             content: '$ ./';
-            color: #ffb96d;
+            color: #c98a4f;
             margin-right: 8px;
         }
 
         #services .punchline {
-            color: #d4a574;
+            color: var(--text-secondary);
             line-height: 1.7;
         }
 
         #services .punchline a {
-            color: #ffb96d;
+            color: #c98a4f;
             text-decoration: underline;
-            text-decoration-color: rgba(255, 185, 109, 0.3);
+            text-decoration-color: rgba(201, 138, 79, 0.3);
             transition: text-decoration-color 0.2s ease;
         }
 
         #services .punchline a:hover {
-            text-decoration-color: rgba(255, 185, 109, 0.8);
+            text-decoration-color: rgba(201, 138, 79, 0.8);
         }
 
         .service-grid {
@@ -799,25 +799,27 @@
 
         .service-card {
             padding: 24px;
-            border-radius: 12px;
-            border: 1px solid rgba(201, 138, 79, 0.25);
-            background: rgba(31, 36, 48, 0.6);
+            border-radius: 16px;
+            border: 1px solid rgba(201, 138, 79, 0.2);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(252, 249, 245, 0.92));
             display: grid;
             gap: 16px;
             text-align: left;
-            transition: background 0.2s ease, border-color 0.2s ease;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 16px rgba(201, 138, 79, 0.08);
         }
 
         .service-card:hover {
-            background: rgba(31, 36, 48, 0.8);
-            border-color: rgba(201, 138, 79, 0.4);
+            transform: translateY(-2px);
+            border-color: rgba(201, 138, 79, 0.35);
+            box-shadow: 0 8px 24px rgba(201, 138, 79, 0.15);
         }
 
         .service-card h3 {
             margin: 0;
             font-size: 18px;
             font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
-            color: #f5e5d3;
+            color: #1f2430;
             font-weight: 600;
             letter-spacing: 0.02em;
         }
@@ -834,7 +836,7 @@
             margin: 0;
             font-size: 15px;
             line-height: 1.7;
-            color: #d4a574;
+            color: var(--text-secondary);
         }
 
         .service-card ul {
@@ -842,7 +844,7 @@
             padding-left: 0;
             display: grid;
             gap: 8px;
-            color: #c98a4f;
+            color: var(--text-secondary);
             font-size: 14px;
             line-height: 1.6;
             list-style: none;
@@ -857,7 +859,7 @@
             content: '→';
             position: absolute;
             left: 0;
-            color: #ffb96d;
+            color: #c98a4f;
             font-weight: 700;
         }
 
@@ -881,10 +883,10 @@
 
         .keyword-tag {
             padding: 6px 12px;
-            border-radius: 6px;
-            background: rgba(15, 18, 24, 0.6);
-            border: 1px solid rgba(201, 138, 79, 0.3);
-            color: #ffb96d;
+            border-radius: 8px;
+            background: rgba(201, 138, 79, 0.1);
+            border: 1px solid rgba(201, 138, 79, 0.2);
+            color: #c98a4f;
             font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
             font-size: 11px;
             font-weight: 600;
@@ -893,8 +895,8 @@
         }
 
         .keyword-tag:hover {
-            background: rgba(15, 18, 24, 0.8);
-            border-color: rgba(201, 138, 79, 0.5);
+            background: rgba(201, 138, 79, 0.18);
+            border-color: rgba(201, 138, 79, 0.35);
         }
 
         .roadmap-keywords {
