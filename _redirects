@@ -1,0 +1,6 @@
+# Force a single canonical URL for SEO.
+# 1) Send all HTTP traffic to HTTPS.
+# 2) Collapse www to the apex domain.
+http://marloweemrys.com/*    https://marloweemrys.com/:splat    301
+http://www.marloweemrys.com/*    https://marloweemrys.com/:splat    301
+https://www.marloweemrys.com/*   https://marloweemrys.com/:splat    301
