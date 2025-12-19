@@ -621,80 +621,29 @@
             </section>
 
             <section class="window calendar-window" id="schedule" aria-labelledby="schedule-title">
-<!-- Glass Scheduling begin -->
-<div class="calendar-embed-container">
+<!-- Glass Scheduling Widget -->
+<div id="glass-yt9fkga2" style="width:100%;max-width:1100px;margin:0 auto;">
   <iframe
-    src="https://mirror.glassworkspace.com/schedule/consultation?embed=true&weekStart=monday"
+    src="https://mirror.glassworkspace.com/schedule/consultation?embed=true&weekStart=monday&hideWeekends=true"
+    style="width:100%;min-height:650px;border:none;border-radius:16px;background:#f8fafc;"
     loading="lazy"
-    allowfullscreen
+    allow="clipboard-write"
+    title="Schedule a meeting"
   ></iframe>
 </div>
 <script>
-
-  (function() {
-    if (window.__glassCrmScheduleResizeListener) return;
-    window.__glassCrmScheduleResizeListener = true;
-
-    function handleGlassCrmResize(event) {
-      if (!event.data || event.data.type !== 'resize' || !event.data.height) {
-        return;
-      }
-
-      var frames = document.querySelectorAll('.calendar-embed-container iframe');
-      frames.forEach(function(frame) {
-        try {
-          if (frame.contentWindow === event.source) {
-            frame.style.height = event.data.height + 'px';
-          }
-        } catch (error) {
-          // access denied when iframe is removed; ignore
-        }
-      });
+(function(){
+  var container=document.getElementById("glass-yt9fkga2");
+  if(!container)return;
+  var iframe=container.querySelector("iframe");
+  window.addEventListener("message",function(e){
+    if(e.data&&e.data.type==="resize"&&e.data.height){
+      try{if(iframe.contentWindow===e.source)iframe.style.minHeight=e.data.height+"px";}catch(err){}
     }
-
-    window.addEventListener('message', handleGlassCrmResize, false);
-  })();
-
+  });
+})();
 </script>
-<style>
-
-  .calendar-embed-container {
-    width: 100%;
-    max-width: 1100px;
-    min-height: 600px;
-    margin: 0 auto;
-    padding: 1rem;
-    box-sizing: border-box;
-    overflow: hidden;
-    background-color: #fff;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .calendar-embed-container iframe {
-    width: 100%;
-    min-height: 0;
-    border: none;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: height 0.2s ease-out;
-  }
-
-  @media (max-width: 768px) {
-    .calendar-embed-container {
-      padding: 0.75rem;
-      min-height: 500px;
-    }
-
-    .calendar-embed-container iframe {
-      min-height: 0;
-    }
-  }
-
-</style>
-<!-- end Glass Scheduling -->
+<!-- End Glass Scheduling -->
             </section>
         </main>
 
