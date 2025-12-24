@@ -622,10 +622,10 @@
 
             <section class="window calendar-window" id="schedule" aria-labelledby="schedule-title">
 <!-- Glass Scheduling Widget -->
-<div id="glass-yt9fkga2" style="width:100%;max-width:1100px;margin:0 auto;">
+<div id="glass-9i1jtgbn" style="width:100%;max-width:1100px;margin:0 auto;">
   <iframe
     src="https://mirror.glassworkspace.com/schedule/consultation?embed=true&weekStart=monday&hideWeekends=true"
-    style="width:100%;min-height:650px;border:none;border-radius:16px;background:#f8fafc;"
+    style="width:100%;height:650px;min-height:650px;border:none;border-radius:16px;background:#f8fafc;transition:height 0.2s ease-out;"
     loading="lazy"
     allow="clipboard-write"
     title="Schedule a meeting"
@@ -633,12 +633,18 @@
 </div>
 <script>
 (function(){
-  var container=document.getElementById("glass-yt9fkga2");
+  var container=document.getElementById("glass-9i1jtgbn");
   if(!container)return;
   var iframe=container.querySelector("iframe");
+  var baseHeight=650;
   window.addEventListener("message",function(e){
     if(e.data&&e.data.type==="resize"&&e.data.height){
-      try{if(iframe.contentWindow===e.source)iframe.style.minHeight=e.data.height+"px";}catch(err){}
+      try{
+        if(iframe.contentWindow===e.source){
+          var newHeight=Math.max(e.data.height,baseHeight);
+          iframe.style.height=newHeight+"px";
+        }
+      }catch(err){}
     }
   });
 })();
