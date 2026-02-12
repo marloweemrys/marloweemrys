@@ -647,12 +647,17 @@
         </main>
 
         <footer class="dock" id="support">
-            <p class="dock-text">© MARLOWE EMRYS 2025</p>
+            <p class="dock-text">© MARLOWE EMRYS <span id="current-year"></span></p>
         </footer>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            const currentYear = document.getElementById('current-year');
+            if (currentYear) {
+                currentYear.textContent = new Date().getFullYear();
+            }
+
             const faqSection = document.getElementById('faq');
             if (!faqSection) {
                 return;
